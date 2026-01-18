@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-WebSocket Proxy Server for Gemini API (NOT Vertex AI)
-Uses API key authentication - simpler than Vertex AI
+WebSocket Proxy Server for GANZA AI - API Key Authentication
+Uses API key authentication for direct API access
 
-This is a SEPARATE server file. If this fails, just use server.py (Vertex AI).
+This is a SEPARATE server file. If this fails, use server.py for alternative authentication.
 """
 
 import asyncio

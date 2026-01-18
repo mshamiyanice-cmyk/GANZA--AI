@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-WebSocket Proxy Server for Gemini Live API
+WebSocket Proxy Server for GANZA AI Live API
 Handles authentication and proxies WebSocket connections.
 
-This server acts as a bridge between the browser client and Gemini API,
-handling Google Cloud authentication automatically using default credentials.
+This server acts as a bridge between the browser client and the AI API,
+handling authentication automatically using default credentials.
 """
 
 import asyncio
@@ -25,7 +25,7 @@ from dotenv import load_dotenv
 env_path = Path(__file__).parent / '.env'
 load_dotenv(dotenv_path=env_path)
 
-# Google auth imports
+# Authentication imports
 import google.auth
 from google.auth.transport.requests import Request
 
@@ -41,7 +41,7 @@ GOOGLE_APPLICATION_CREDENTIALS = _creds_path if _creds_path else None
 
 
 def generate_access_token():
-    """Retrieves an access token using Google Cloud credentials from environment."""
+    """Retrieves an access token using credentials from environment."""
     try:
         # Use service account if path provided, otherwise use ADC
         if GOOGLE_APPLICATION_CREDENTIALS:
